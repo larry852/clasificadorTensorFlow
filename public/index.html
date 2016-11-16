@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<!--
+	Highlights by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html ng-app="mainModule">
+	<head>
+		<title>Clasificador</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script src="assets/angular/request.js"></script>
+	</head>
+	<body ng-controller="controller">
+
+		<!-- Header -->
+			<section id="header">
+				<header class="major">
+					<h1>Clasificador</h1>
+					<p>Calidad en variantes rojas y blancas del vino portugués<a href=" http://www.vinhoverde.pt/pt/homepage"> "Vinho Verde". </a></p> 
+					<a href="http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/"><p>Dataset real.</p></a>
+					<br><br>
+					<a href="#one" class="goto-next scrolly">Next</a>
+				</header>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main special">
+				<div class="container">
+					<span class="image fit primary"><img src="images/pic01.jpg" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<h2>Características</h2>
+						</header>
+						<form method="post" action="#three">
+						<div class="row uniform">
+							<div class="6u 12u$(xsmall)"><input type="number" step=0.0000001 name="acidez" id="acidez" placeholder="Cant. de acidez fija" ng-model="acidez"/><!--<p> AF</p>--></div>
+							<div class="6u$ 12u$(xsmall)"><input type="number" step=0.0000001 name="ph" id="ph" placeholder="Cant. de pH" ng-model="ph"/><!--<p> pH</p>--></div>
+							<div class="6u$ 12u$(xsmall)"><input type="number" step=0.0000001 name="alcohol" id="alcohol" placeholder="Cant. de alcohol" ng-model="alcohol"/></div>							
+							<div class="12u$">
+								<ul class="actions">
+									<li><input type="submit" value="Resultados" class="special" /></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+					</div>
+					<a href="#three" class="goto-next scrolly"></a>
+				</div>
+			</section>
+
+
+		<!-- Three -->
+			<section id="three" class="main special">
+				<div class="container">
+					<span class="image fit primary"><img src="images/pic03.jpg" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<h2>Resultado</h2>
+						</header>
+						<p ng-model="respuesta"> </p>
+					</div>
+					
+				</div>
+			</section>
+
+
+
+		<!-- Footer -->
+			<section id="footer">
+				<footer>
+					<ul class="copyright">
+						<li>Inteligencia Artificial.</li><li>Alvaro Hernandez - Larry Portocarrero - Katherine Velandia</li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
